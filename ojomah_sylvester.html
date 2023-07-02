@@ -1,0 +1,89 @@
+Instructions: Do not use functions just basic code that prints to the screen.
+
+1.	Push your assignment file with the name firstname_lastname_5.py to your GitHub repository and add the link of your repository to your submission. – 10 marks
+2.	Fill the code out in this MS Word document and upload the file with the name firstname_lastname.docx – 10 marks
+
+3.	Given the below variable (50 marks – 5 marks each)
+
+str = "The quick brown fox jumps over the lazy dog"
+a.	Print the string to the page
+
+__sentence = input("The quick brown fox jumps over the lazy dog: ")
+print("The quick brown fox jumps over the lazy dog:")
+
+b. Print the length of the string to the page
+
+str = " The quick brown fox jumps over the lazy dog "
+print(len(str))
+
+c. Print the string in all uppercase letters
+
+str = input("The quick brown fox jumps over the lazy dog :")
+print("Given String :",str)
+print("UpperCase :"+ str.upper())
+
+d. Print the string in all lowercase letters
+
+str = input("The quick brown fox jumps over the lazy dog:")
+print("Given String :",str)
+print("LowerCase :"+ str.lower())
+
+e. Print the string in the title case
+str = ' The quick brown fox jumps over the lazy dog:'
+title = str.title()
+print(f'{str} --> {title}')
+f. Print the string in reverse
+def reverse(s):
+    str = ""
+    for i in s:
+        str = i + str
+    return str
+
+s = "The quick brown fox jumps over the lazy dog"
+
+print("The original string is : ", end="")
+print(s)
+
+print("The reversed string(using loops) is : ", end="")
+print(reverse(s))
+
+g. Print the string in reverse title case
+____your code here_______
+
+h. Count the number of times the letter “a” appears in the string
+test_str = " The quick brown fox jumps over the lazy dog "
+counter = test_str.count('a')
+print ("Count of a in The quick brown fox jumps over the lazy dog is : "
+                        + str(counter))
+
+i. Count the number of times the word “the” appears in the string
+a_string = 'the quick brown fox jumps over the lazy dog' print('the appears this many times: ', a_string.count('the')) j. Replace the word “the” with the word “a”
+
+string= “The quick brown fox jumps over the lazy dog”
+print(string.replace(“the”, “a”))
+print(string)
+
+4.	 count the frequency of each letter in the string and save the results in a dictionary (15 marks)
+
+def word_count(str):
+    counts = dict()
+    words = str.split()
+
+    for word in words:
+        if word in counts:
+            counts[word] += 1
+        else:
+            counts[word] = 1
+
+    return counts
+
+print( word_count('the quick brown fox jumps over the lazy dog.'))
+5.	Given the below lists; (15 marks)
+people = ['Jane', 'John', 'Jack', 'Janet']
+sex = ['Female', 'Male', 'Male', 'Female']
+age = [23, 34, 16, 28]
+      Interpolate the three lists into a string that reads:
+      Jane the Female is 23 years old.
+      John the Male is 34 years old.
+      Jack the Male is 16 years old.
+      Janet the Female is 28 years old.
